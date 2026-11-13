@@ -10,10 +10,11 @@ while row_number <= 0 or row_number > len(video_games):
     row_number = int(input("Invalid number. Which row would you like to inspect?: "))
 #I will assume that users wiill insert rows starting from 1
 # Use .iloc[] to display information about the selected game.
-print(video_games.iloc[row_number - 1])
+#I have used - 2 to account for the title and index 0
+print(video_games.iloc[row_number - 2])
 # Ask the user to enter a new status for that game, such as Backlog, Playing, Completed, or Dropped.
 new_status = str(input("What's the new status for the game? (Backlog, Playing, Completed, or Dropped): "))
 # Use .at[] to update the selected game
-video_games.at[row_number - 1, "Status"] = new_status
+video_games.at[row_number - 2, "Status"] = new_status
 
 print(video_games)

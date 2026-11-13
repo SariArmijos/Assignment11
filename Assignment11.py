@@ -3,6 +3,8 @@ import pandas as pd
 # Read the CSV file using Pandas.
 video_games = pd.read_csv("video_games_raw.csv")
 
+#TASK 1
+
 # Ask the user for a specific row number to inspect.
 row_number = int(input("Which row would you like to inspect?: "))
 #I have added a while loop just in case user selects row o instead of starting at 1 or choose a row that does not exist in the database
@@ -18,3 +20,5 @@ new_status = str(input("What's the new status for the game? (Backlog, Playing, C
 video_games.at[row_number - 2, "Status"] = new_status
 
 print(video_games)
+
+#TASK 2

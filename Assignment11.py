@@ -38,4 +38,4 @@ print(video_games.query("Recommended == 'Yes'"))
 #Save the updated data to a new file named video_games_cleaned.csv.
     #Add index = False so the document does not save with the index as an extra column
 video_games.to_csv("video_games_cleaned.csv", index = False)
-print("The updated document has been saves as 'video_games_cleaned.csv'")
+print("The updated document has been saved as 'video_games_cleaned.csv'")

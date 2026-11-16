@@ -10,14 +10,14 @@ row_number = int(input("Which row would you like to inspect?: "))
 # I have added a while loop just in case user selects row o instead of starting at 1 or choose a row that does not exist in the database
 while row_number <= 0 or row_number > len(video_games):
     row_number = int(input("Invalid number. Which row would you like to inspect?: "))
-# I will assume that users wiill insert rows starting from 1
+# I will assume that users will insert rows starting from 1
 # Use .iloc[] to display information about the selected game.
 # I have used - 2 to account for the title and index 0
-print(video_games.iloc[row_number - 2])
+print(video_games.iloc[row_number -1])
 # Ask the user to enter a new status for that game, such as Backlog, Playing, Completed, or Dropped.
 new_status = str(input("What's the new status for the game? (Backlog, Playing, Completed, or Dropped): "))
 # Use .at[] to update the selected game
-video_games.at[row_number - 2, "Status"] = new_status
+video_games.at[row_number -1, "Status"] = new_status
 
 #print(video_games)
 
@@ -39,5 +39,3 @@ print(video_games.query("Recommended == 'Yes'"))
     #Add index = False so the document does not save with the index as an extra column
 video_games.to_csv("video_games_cleaned.csv", index = False)
 print("The updated document has been saved as 'video_games_cleaned.csv'")
-
-#LOOK FOR HEADERS TRUE SO THEY KNOW AND NO NEEDN TO SUBSTRACT

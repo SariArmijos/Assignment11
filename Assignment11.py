@@ -39,3 +39,5 @@ print(video_games.query("Recommended == 'Yes'"))
     #Add index = False so the document does not save with the index as an extra column
 video_games.to_csv("video_games_cleaned.csv", index = False)
 print("The updated document has been saved as 'video_games_cleaned.csv'")
+
+#LOOK FOR HEADERS TRUE SO THEY KNOW AND NO NEEDN TO SUBSTRACT
